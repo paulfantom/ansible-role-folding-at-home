@@ -1,0 +1,10 @@
+---
+- name: Assert correct power setting
+  assert:
+    that: "fah_power in ['light', 'medium', 'full']"
+    msg: "Incorrect power setting: {{ fah_power }}"
+
+- name: Assert slots are configured
+  assert:
+    that: "fah_slots | length > 0"
+    msg: "At least one slot needs to be configured"

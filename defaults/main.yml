@@ -1,0 +1,14 @@
+---
+fah_gpu: false
+fah_power: medium
+
+# 245681 is team "HappyMushrooms"
+fah_team: 245681
+fah_user: anonymous
+fah_passkey: ""
+
+fah_allow_ips: []
+fah_slots:
+  - 'CPU'
+
+fah_state: present

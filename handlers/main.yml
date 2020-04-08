@@ -1,0 +1,12 @@
+---
+- name: start folding-at-home
+  service:
+    name: FAHClient
+    state: started
+  become: true
+
+- name: restart folding-at-home
+  service:
+    name: FAHClient
+    state: restarted
+  become: true

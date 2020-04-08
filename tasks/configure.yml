@@ -1,0 +1,13 @@
+---
+- name: Create config directory
+  become: true
+  file:
+    dest: /etc/fahclient
+    state: directory
+
+- name: Populate config.xml
+  become: true
+  template:
+    src: config.xml
+    dest: /etc/fahclient/config.xml
+  notify: restart folding-at-home

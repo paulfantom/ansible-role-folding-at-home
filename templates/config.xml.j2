@@ -1,0 +1,24 @@
+<config>
+  <!-- Folding Slot Configuration -->
+  <gpu v='{{ fah_gpu }}'/>
+
+  <!-- Slot Control -->
+  <power v='{{ fah_power }}'/>
+
+  <!-- User Information -->
+  <user v='{{ fah_user }}'/>
+  <team v='{{ fah_team }}'/>
+{% if fah_passkey | length > 0 %}
+  <passkey v='{{ fah_passkey }}'/>
+{% endif %}
+
+{% if fah_allow_ips | length > 0 %}
+  <allow v='{{ fah_allow_ips | join(' ') }}'/>
+  <web-allow v='{{ fah_allow_ips | join(' ') }}'/>
+{% endif %}
+
+  <!-- Folding Slots -->
+{% for slot in fah_slots %}
+  <slot id='{{ loop.index }}' type='{{ slot }}'/>
+{% endfor %}
+</config>

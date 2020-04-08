@@ -1,0 +1,16 @@
+---
+- name: Download client package
+  get_url:
+    url: "{{ fah_download_link }}"
+    dest: /tmp/
+  register: __download_client
+  until: _download_client is succeeded
+  retries: 5
+  delay: 2
+
+- name: Install package
+  package:
+    name: "{{ __download_client.dest }}"
+    state: present
+  become: true
+  notify: start folding-at-home

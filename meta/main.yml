@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Pawel Krupa (paulfantom)
+  description: Manages folding@home worker instances
+  license: MIT
+  min_ansible_version: 2.6
+  platforms:
+    - name: CentOS
+      versions:
+        - 7
+    - name: Debian
+      versions:
+        - 9
+        - 10
+
+  galaxy_tags:
+    - foldingathome
+    - folding
+    - home
+
+dependencies: []
